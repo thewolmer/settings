@@ -1,0 +1,163 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "command": "extension.splitHTMLAttributes",
+    "key": "ctrl+shift+alt+z",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-extension.splitHTMLAttributes",
+    "key": "ctrl+shift+alt+a",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-workbench.action.files.saveLocalFile",
+    "key": "ctrl+shift+s",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "command": "workbench.action.files.saveFiles",
+    "key": "ctrl+shift+s"
+  },
+  {
+    "command": "-workbench.action.files.saveAs",
+    "key": "ctrl+shift+s"
+  },
+  {
+    "command": "-workbench.action.files.newUntitledFile",
+    "key": "ctrl+n"
+  },
+  {
+    "command": "newFile.createNewFile",
+    "key": "ctrl+n"
+  },
+  {
+    "command": "-newFile.createNewFile",
+    "key": "ctrl+alt+n"
+  },
+  {
+    "command": "workbench.action.focusActiveEditorGroup",
+    "key": "ctrl+up"
+  },
+  {
+    "command": "workbench.action.terminal.focus",
+    "key": "ctrl+down",
+    "when": "terminalHasBeenCreated"
+  },
+  {
+    "command": "-workbench.action.terminal.focus",
+    "key": "ctrl+down",
+    "when": "accessibilityModeEnabled && accessibleViewOnLastLine && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewOnLastLine && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+  },
+  {
+    "command": "workbench.action.terminal.kill",
+    "key": "delete",
+    "when": "terminalHasBeenCreated && terminalFocus || terminalIsOpen && terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.focusNext",
+    "key": "ctrl+right",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "command": "-workbench.action.terminal.focusNext",
+    "key": "ctrl+pagedown",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "command": "workbench.action.terminal.focusNextPane",
+    "key": "ctrl+left",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "command": "-workbench.action.terminal.focusNextPane",
+    "key": "alt+down",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "command": "-workbench.action.quickOpen",
+    "key": "ctrl+p"
+  },
+  {
+    "command": "find-it-faster.findFiles",
+    "key": "ctrl+p"
+  },
+  {
+    "command": "-find-it-faster.findFiles",
+    "key": "ctrl+shift+j"
+  },
+  {
+    "command": "workbench.action.alignPanelLeft",
+    "key": "ctrl+h"
+  },
+  {
+    "command": "workbench.action.alignPanelRight",
+    "key": "ctrl+l"
+  },
+  {
+    "command": "workbench.action.showAllEditors",
+    "key": "space ,",
+    "when": "vim.mode == 'Normal' && (editorTextFocus ||!inputFocus)"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "space e",
+    "when": "vim.mode == 'Normal' && (editorTextFocus ||!inputFocus)"
+  },
+  {
+    "command": "workbench.action.nextEditorInGroup",
+    "key": "tab",
+    "when": " (vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus ||!inputFocus)"
+  },
+  {
+    "command": "workbench.action.previousEditorInGroup",
+    "key": "shift-tab",
+    "when": " (vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus ||!inputFocus)"
+  },
+  //Coding
+  {
+    "command": "editor.action.moveLinesUpAction",
+    "key": "shift+k",
+    "when": " vim.mode =/= 'Insert' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.moveLinesDownAction",
+    "key": "shift+j",
+    "when": " vim.mode =/= 'Insert' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.showHover",
+    "key": "shift+k",
+    "when": " vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.rename",
+    "key": "space r",
+    "when": " vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.codeAction",
+    "key": "space c a",
+    "when": " vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.formatDocument",
+    "key": "space c f",
+    "when": " vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.commentLine",
+    "key": "space c l",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.organizeImports",
+    "key": "space o i",
+    "when": " vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.revealDefinition",
+    "key": "space g d",
+    "when": " vim.mode == 'Normal' && editorTextFocus"
+  },
+]
