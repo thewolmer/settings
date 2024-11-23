@@ -10,90 +10,55 @@
   "editor.accessibilitySupport": "off",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "mouseover",
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "relative",
   "editor.mouseWheelZoom": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "explorer.confirmDelete": false,
+  "workbench.tree.renderIndentGuides": "onHover",
   "diffEditor.ignoreTrimWhitespace": false,
   "window.commandCenter": false,
-  "window.menuBarVisibility": "toggle",
   "terminal.integrated.fontSize": 16,
-
   // Fonts
-  "apc.font.family": "Geist Mono",
   "editor.fontFamily": "Geist Mono",
   "notebook.output.fontFamily": "Geist Mono",
   "scm.inputFontFamily": "Geist Mono",
   "chat.editor.fontFamily": "Geist Mono",
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontLigatures": true,
-
   //Theme
-  "window.titleBarStyle": "custom",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
-    "workbench.colorCustomizations": {
-    "[Gruvbox Dark Hard]": {
-      "sideBar.background": "#212121",
-      "sideBar.border": "#1d2021",
-      "terminal.background": "#212121"
-    }
-  }
-
-  // APC
-  "apc.activityBar": {
-    "position": "bottom",
-    "hideSettings": true,
-    "size": 28
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/*.{tsx,ts,js,jsx}": "${dirname}/${filename}.${extname}"
   },
-  "apc.statusBar": {
-    "position": "editor-bottom",
-    "alignment": "left",
-    "size": 28,
-    "height": 28
-  },
-  "apc.listRow": {
-    "height": 22,
-    "fontSize": 13
-  },
-  "apc.electron": {
-    "titleBarStyle": "hiddenInset",
-    "trafficLightPosition": {
-      "x": 10,
-      "y": 12
-    }
-  },
-
   // Language formatter
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[postcss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
-
   // Git
   "git.confirmSync": true,
   "git.autofetch": true,
@@ -103,8 +68,10 @@
     "end": 75,
     "minimumMargin": 0
   },
-  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
-
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning"
+  ],
   // Formatting
   "editor.formatOnSave": true,
   "emmet.includeLanguages": {
@@ -112,14 +79,23 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
+    "source.fixAll.stylelint": "explicit",
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll": "explicit"
   },
-
   // Formatting - EsLint
   "eslint.run": "onSave",
   "eslint.lintTask.enable": true,
-  "eslint.validate": ["javascript", "typescript", "javascriptreact", "html", "typescriptreact", "vue", "css"],
-
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "html",
+    "typescriptreact",
+    "vue",
+    "css"
+  ],
   // Formatting - Prettier
   "prettier.jsxSingleQuote": true,
   "prettier.endOfLine": "auto",
@@ -131,17 +107,14 @@
   "prettier.singleQuote": true,
   "prettier.vueIndentScriptAndStyle": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-
   // Discord Presence
   "discord.removeRemoteRepository": true,
   "prettier.configPath": ".prettierrc.js",
   "discord.lowerDetailsEditing": "📂: {workspace}",
   "discord.detailsEditing": "📄: {file_name}",
   "discord.removeDetails": true,
-
   // Prisma
   "prisma.showPrismaDataPlatformNotification": false,
-
   // Spelling dictionary
   "cSpell.userWords": [
     "axios",
@@ -154,17 +127,69 @@
     "tailwindcss",
     "UPLOADTHING"
   ],
-
   // Misc
   "editor.linkedEditing": true,
-  "security.workspace.trust.untrustedFiles": "open",
+  "files.eol": "\n",
   "workbench.layoutControl.enabled": false,
-
   // Extensions
-  "extensions.autoCheckUpdates": true,
   "extensions.ignoreRecommendations": false,
   "extensions.autoUpdate": true,
   "github.copilot.editor.enableAutoCompletions": true,
   "debug.disassemblyView.showSourceCode": false,
   "gitlens.views.commitDetails.files.layout": "tree",
+  "workbench.colorCustomizations": {
+    "[Gruvbox Dark Hard]": {
+      "sideBar.background": "#212121",
+      "sideBar.border": "#1d2021",
+      "terminal.background": "#212121"
+    },
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "darcula.css",
+  "find-it-faster.general.openFileInPreviewEditor": true,
+  "redhat.telemetry.enabled": false,
+  "find-it-faster.general.hideTerminalAfterFail": false,
+  "find-it-faster.general.hideTerminalAfterSuccess": false,
+  "find-it-faster.general.useTerminalInEditor": true,
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "yaml.schemas": {
+    "file:///home/wol/.vscode-server/extensions/atlassian.atlascode-3.0.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-f>": true,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "vim.statusBarColorControl": true,
 }
