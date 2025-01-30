@@ -33,10 +33,10 @@
   },
   // Language formatter
   "[html]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[postcss]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -51,10 +51,10 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -109,7 +109,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   // Discord Presence
   "discord.removeRemoteRepository": true,
-  "prettier.configPath": ".prettierrc.js",
+  // "prettier.configPath": ".prettierrc.js",
   "discord.lowerDetailsEditing": "📂: {workspace}",
   "discord.detailsEditing": "📄: {file_name}",
   "discord.removeDetails": true,
@@ -143,9 +143,12 @@
       "sideBar.border": "#1d2021",
       "terminal.background": "#212121"
     },
-    "statusBar.background": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f",
+    "[Tokyo Night]": {
+      "editor.background": "#16161e"
+    },
+    "statusBar.background": "#1a2434",
+    "statusBar.noFolderBackground": "#1a2434",
+    "statusBar.debuggingBackground": "#1a2434",
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff"
   },
@@ -178,18 +181,39 @@
   "markdown-preview-enhanced.codeBlockTheme": "darcula.css",
   "find-it-faster.general.openFileInPreviewEditor": true,
   "redhat.telemetry.enabled": false,
-  "find-it-faster.general.hideTerminalAfterFail": false,
-  "find-it-faster.general.hideTerminalAfterSuccess": false,
-  "find-it-faster.general.useTerminalInEditor": true,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Tokyo Night",
   "yaml.schemas": {
-    "file:///home/wol/.vscode-server/extensions/atlassian.atlascode-3.0.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///c%3A/Users/realk/.vscode/extensions/atlassian.atlascode-3.0.15/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "vim.handleKeys": {
     "<C-d>": true,
     "<C-f>": true,
     "<C-s>": false,
-    "<C-z>": false
+    "<C-z>": false,
   },
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
   "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": [
+    "#1a1b26",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.insert": [
+    "#653e27",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.visual": [
+    "#1a2434",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.visualline": [
+    "#1a2434",
+    "#ffffff"
+  ],
+  "vim.autoSwitchInputMethod.enable": true,
+  "find-it-faster.general.showMaximizedTerminal": true,
+  "find-it-faster.general.restoreFocusTerminal": true,
+  "find-it-faster.general.hideTerminalAfterFail": false,
+  "find-it-faster.general.hideTerminalAfterSuccess": false,
+  "find-it-faster.general.useTerminalInEditor": true,
 }
