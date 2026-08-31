@@ -28,10 +28,10 @@
 font-family = "Geist Mono"
 font-size = 14
 window-padding-x = 10
-window-decoration = true
-theme = "Nvim Dark"
-background-opacity = 0.90
-background-blur = 70
+theme = "Aizen Dark"
+background-opacity = 0.8
+background-blur = 65
+title = "Terminal"
 #
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
