@@ -47,8 +47,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # ================================
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"        # Loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"     # Loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm use default >/dev/null 2>&1
 
 
 
@@ -63,6 +64,11 @@ alias ls='eza --git --icons=always --oneline --color=always --long --no-user --n
 alias la='eza -a --git --icons=always --color=always --long --no-user --no-time --no-permissions'
 alias ll='eza -lah --git --icons=always'
 alias lt='eza --tree --level=2 --icons=always'
+
+# git
+alias gch='git branch --all --format="%(refname:short)" | sed "s#^remotes/origin/##" | sort -u | fzf | xargs -r git checkout'
+
+
 
 
 
@@ -129,6 +135,29 @@ export PATH="$HOME/.local/bin:$PATH"
 # ================================
 
 source $ZSH/oh-my-zsh.sh
+# Added by Antigravity IDE
+export PATH="/Users/karanrao/.antigravity-ide/antigravity-ide/bin:$PATH"
 
+# ================================
+# Terminal editor (lazygit / git / etc.)
+# ================================
+export EDITOR=nvim
+export VISUAL=nvim
 
+# ================================
+# Herdr (restore prompt on cold Ghostty start)
+# ================================
+if [[ "$TERM_PROGRAM" == "ghostty" ]] && [[ -o interactive ]] && [[ -z "$HERDR_ENV" ]] && [[ -t 0 ]]; then
+  echo
+  cat <<'EOF'
+ /\_/\
+( o.o )
+ > ^ <
+EOF
+  echo
+  read "REPLY?Restore herdr session? [Y/n] "
+  if [[ -z "$REPLY" || "$REPLY" == [Yy]* ]]; then
+    herdr
+  fi
+fi
 
